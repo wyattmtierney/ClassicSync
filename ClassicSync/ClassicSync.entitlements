@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Audio input access (for BlackHole loopback capture) -->
+	<key>com.apple.security.device.audio-input</key>
+	<true/>
+	<!-- AppleScript / Apple Events to control Music.app -->
+	<key>com.apple.security.automation.apple-events</key>
+	<true/>
+	<!-- Read/write access to user-selected folders (output dir) -->
+	<key>com.apple.security.files.user-selected.read-write</key>
+	<true/>
+	<!-- Needed for writing to ~/Music/ClassicSync default output -->
+	<key>com.apple.security.files.downloads.read-write</key>
+	<false/>
+	<!-- Allow running ffmpeg subprocess -->
+	<key>com.apple.security.temporary-exception.sbpl</key>
+	<string>(allow process-exec (literal "/opt/homebrew/bin/ffmpeg") (literal "/usr/local/bin/ffmpeg") (literal "/usr/bin/ffmpeg"))</string>
+</dict>
+</plist>
