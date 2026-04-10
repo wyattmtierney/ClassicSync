@@ -65,15 +65,21 @@ class AppleScriptBridge {
     }
 
     func pausePlayback() {
-        _ = runAppleScript("""tell application "Music" to pause""")
+        _ = runAppleScript("""
+            tell application "Music" to pause
+            """)
     }
 
     func resumePlayback() {
-        _ = runAppleScript("""tell application "Music" to play""")
+        _ = runAppleScript("""
+            tell application "Music" to play
+            """)
     }
 
     func stopPlayback() {
-        _ = runAppleScript("""tell application "Music" to stop""")
+        _ = runAppleScript("""
+            tell application "Music" to stop
+            """)
     }
 
     func isPlaying() -> Bool {
